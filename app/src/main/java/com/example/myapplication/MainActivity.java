@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView textViewZmieniany;
     RadioButton radioButtonDuzy, radioButtonMaly, radioButtonZielony, radioButtonNiebieski;
+    SeekBar seekBarRozmiarCzcionki;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -32,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         radioButtonMaly = findViewById(R.id.radioButton2);
         radioButtonZielony = findViewById(R.id.radioButton3);
         radioButtonNiebieski = findViewById(R.id.radioButton4);
+        seekBarRozmiarCzcionki = findViewById(R.id.seekBar);
 
         radioButtonDuzy.setOnClickListener(
                 new View.OnClickListener() {
@@ -75,6 +78,24 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );
+        seekBarRozmiarCzcionki.setOnSeekBarChangeListener(
+                new SeekBar.OnSeekBarChangeListener() {
+                    @Override
+                    public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                        textViewZmieniany.setTextSize(Float.parseFloat(String.valueOf(i)));
+                    }
+
+                    @Override
+                    public void onStartTrackingTouch(SeekBar seekBar) {
+
+                    }
+
+                    @Override
+                    public void onStopTrackingTouch(SeekBar seekBar) {
+
+                    }
+                }
+        );
 
 //        btnZatwierdz.setOnClickListener(
 //                new View.OnClickListener() {
@@ -97,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
 //                    }
 //                }
 //        );
+
 
     }
 }

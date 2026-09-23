@@ -71,10 +71,12 @@
         android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="Czcionka" />
 
     <SeekBar
         android:id="@+id/seekBar"
+        android:min="15"
+        android:max="100"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
