@@ -47,10 +47,10 @@ public class MainActivity extends AppCompatActivity {
                             textViewZmieniany.setAllCaps(false);
                         }
                         if(radioButtonNiebieski.isChecked()) {
-                            textViewZmieniany.setTextColor(Color.parseColor("blue"));
+                            textViewZmieniany.setTextColor(Color.parseColor("#1F99FA")); //mozna tez dac "blue" po prostu
                         }
                         if(radioButtonZielony.isChecked()) {
-                            textViewZmieniany.setTextColor(Color.parseColor("#16AB1D"));
+                            textViewZmieniany.setTextColor(Color.parseColor("#16AB1D")); //mozna tez dac "green" po prostu
                         }
                     }
                 }
